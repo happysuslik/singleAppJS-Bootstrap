@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/custome.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="../assets/javascripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../assets/javascripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../assets/javascripts/store.min.js"></script>
+ 	<script type="text/javascript" src="../assets/javascripts/icons-awesome.js"></script>
+    <script type="text/javascript" src="../assets/javascripts/custome.js"></script>
+	<title>Test Task</title>
+</head>
+<body>
+
+  <header>
+    <nav class = "navbar navbar-inverse navbar-static-top">
+      <div class = "container">
+
+          <a href = "#" class = "navbar-brand">Task</a>
+
+      </div>
+    </nav>
+  </header>
+
+  <div class = "container">
+    <div class = "row">
+      
+      <div class = "col-lg-12">
+        <div class = "panel panel-default">
+          
+          <div class = "panel-body">
+            <div class = "page-header">
+              <center><h3>Tasks</h3></center>
+            </div>
+            <ul class = "list-group" id = "listTasks">
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+
+  <div class = "modal fade" id = "delete" role = "dialog">
+    <div class = "modal-dialog">
+      <div class = "modal-content">
+        <div class = "modal-header">
+          <center>
+            <h4>You can return a remote task</h4>
+          </center>
+        </div>
+        <div class = "modal-body">
+          <center>
+            <h4><span id = "info_second">5</span> seconds remaining</h4>
+          </center>
+        </div>
+        <div class = "modal-footer">
+          <center>
+            <a href="#">
+              <span class="fa fa-undo fa-3x" aria-hidden="true" data-dismiss = "modal" id = "undo"></span>
+            </a>
+          </center>
+          <a class = "btn btn-default" data-dismiss = "modal" id = "close">Close</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class = "modal fade" id = "task_form" role = "dialog">
+    <div class = "modal-dialog">
+      <div class = "modal-content">
+        <form class = "form-horizontal" name = "form_add_task">
+          <div class = "modal-header">
+            <center>
+              <h4>Create task</h4>
+            </center>
+          </div>
+          <div class = "modal-body">
+            
+            <div class = "form-group">
+
+              <label for = "name-task" class = "col-lg-2">Name:</label>
+              <div class = "col-lg-10">
+                <input type = "text" class = "form-control" id = "name-task" placeholder = "Name task" name = "name_task">
+              </div>
+
+            </div>
+
+          </div>
+          <div class = "modal-footer">
+            <a class = "btn btn-default" data-dismiss = "modal">Close</a>
+            <a class = "btn btn-default" data-dismiss = "modal" id = "submitForm" type = "submit">Add</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="add_task">
+    <button href = "#task_form" class="btn btn-success" data-toggle = "modal">Add Task</button>
+  </div>
+  
+	<footer class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container">
+      <span class="navbar-text">My footer</span>
+    </div>
+	</footer>
+</body>
